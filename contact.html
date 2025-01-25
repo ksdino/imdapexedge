@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Immediate Edge Apex</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0A0F1E;
+        }
+
+        .bg-pattern {
+            background-color: #0A0F1E;
+            background-image: 
+                radial-gradient(circle at 100% 0%, rgba(59,130,246,0.08) 0, transparent 45%),
+                radial-gradient(circle at 0% 100%, rgba(59,130,246,0.08) 0, transparent 45%),
+                linear-gradient(135deg, rgba(59,130,246,0.03) 0%, transparent 25%);
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .logo-text {
+            background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .contact-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%);
+            border-radius: 12px;
+            padding: 1rem;
+            color: #60A5FA;
+        }
+
+        .contact-form-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-input {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+
+        .form-input::placeholder {
+            color: #64748B;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+    
+.legal-notice {
+    background: rgba(15, 23, 42, 0.8);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.uk-notice {
+    border-left: 3px solid #FBBF24;
+    padding-left: 1rem;
+}
+
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94A3B8;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.social-link:hover {
+    color: #60A5FA;
+    transform: translateY(-5px);
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.social-link span {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.footer-section {
+    background: rgba(15, 23, 42, 0.9);
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.footer-col {
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.footer-col:hover {
+    transform: translateY(-5px);
+}
+
+.footer-col ul li {
+    transition: all 0.3s ease;
+}
+    </style>
+</head>
+<body class="bg-pattern min-h-screen">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-opacity-90 bg-gray-900 backdrop-filter backdrop-blur-lg border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-12">
+                    <div class="text-2xl font-bold logo-text tracking-tight">
+                        Immediate Edge Apex
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-gray-300 hover:text-white font-medium">Home</a>
+                        <a href="#" class="nav-link text-gray-300 hover:text-white font-medium">About</a>
+                        <a href="#" class="nav-link text-gray-300 hover:text-white font-medium">Market Price</a>
+                        <a href="contact.html" class="nav-link text-white font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden menu-button" id="menuBtn">
+                        <svg class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4" id="mobileMenu">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-300 hover:text-white px-4 py-2 rounded-lg hover:bg-gray-800">Home</a>
+                    <a href="#" class="text-gray-300 hover:text-white px-4 py-2 rounded-lg hover:bg-gray-800">About</a>
+                    <a href="#" class="text-gray-300 hover:text-white px-4 py-2 rounded-lg hover:bg-gray-800">Market Price</a>
+                    <a href="contact.html" class="text-white px-4 py-2 rounded-lg bg-gray-800">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-white text-center mb-12">Contact Us</h1>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Info Cards -->
+                <div class="space-y-6">
+                    <!-- Email Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="text-xl font-semibold text-white mb-2">E-mail</h3>
+                            <a href="mailto:contact@immediateapexedge.com" class="text-blue-400 hover:text-blue-300">
+                                contact@immediateapexedge.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Address Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="text-xl font-semibold text-white mb-2">Address</h3>
+                            <p class="text-gray-300">
+                                Immediate Apex Edge<br>
+                                10 Avenue Montaigne<br>
+                                Paris <span class="text-blue-400">75008</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Send us a message</h3>
+                    <form class="space-y-6">
+                        <div class="form-group">
+                            <label for="name" class="text-gray-300">Full Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="text-gray-300">Email Address</label>
+                            <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="text-gray-300">Subject</label>
+                            <input type="text" id="subject" class="form-input" placeholder="How can we help?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="text-gray-300">Message</label>
+                            <textarea id="message" rows="5" class="form-input" placeholder="Your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+<!-- Footer Section -->
+<footer class="footer-section py-16 relative z-10">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <!-- Company Description -->
+            <div class="footer-col">
+                <h3 class="text-2xl font-bold text-white mb-6">Immediate Apex Edge</h3>
+                <p class="text-gray-300 mb-6">With Immediate Apex Edge, take advantage of revolutionary trading technology combining the power of AI analysis and strategic precision to maximize your opportunities in the financial markets.</p>
+                <button class="cta-button text-lg font-semibold px-8 py-3 rounded-xl text-white">
+                    Enjoy Now!
+                </button>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-gray-300 hover:text-blue-400">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-blue-400">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h3 class="text-xl font-bold text-white mb-6">Contacts</h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <svg class="h-6 w-6 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span>10 Avenue Montaigne, 75008 Paris</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <a href="mailto:contact@immediateapexedge.com" class="hover:text-blue-400">contact@immediateapexedge.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                        <a href="https://immediateapexedge.com" target="_blank" class="hover:text-blue-400">immediateapexedge.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 Immediate Apex Edge. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Form submission handling
+            const contactForm = document.querySelector('form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                // Here you would typically send the form data to your backend
+                console.log('Form submitted:', formData);
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Show success message (you can customize this)
+                alert('Message sent successfully!');
+            });
+        });
+    </script>
+</body>
+</html>
